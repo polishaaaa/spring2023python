@@ -46,7 +46,7 @@ def get_row(grid: tp.List[tp.List[str]], pos: tp.Tuple[int, int]) -> tp.List[str
 
 def get_col(grid: tp.List[tp.List[str]], pos: tp.Tuple[int, int]) -> tp.List[str]:
     ans=[]
-    for i in range(9):
+    for i in range(len(grid)):
         ans.append(grid[i][pos[1]])
     return ans
 
@@ -141,7 +141,7 @@ def check_solution(solution: tp.List[tp.List[str]]) -> bool:
 def generate_sudoku(N: int) -> tp.List[tp.List[str]]:
     grid = solve([['.' for i in range(9)] for j in range(9)])
     k=0
-    while k!=N:
+    while k<N:
         row=randint(0,8)
         col=randint(0,8)
         if grid[row][col]=='.':

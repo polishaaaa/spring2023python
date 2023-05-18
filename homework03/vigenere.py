@@ -40,6 +40,10 @@ def encrypt_vigenere(plaintext: str, keyword: str) -> str:
             ans += rus_ABC[sdvig % 33]
         elif plaintext[i]==' ':
             ans += ' '
+        elif ciphertex[i] == '-':
+            ans += '-'
+        elif ciphertex[i] == ',':
+            ans += ','
     return ans
 
 def decrypt_vigenere( ciphertex:str, keyword: str) -> str:
@@ -84,4 +88,8 @@ def decrypt_vigenere( ciphertex:str, keyword: str) -> str:
             ans += rus_ABC[sdvig % 33]
         elif ciphertex[i] == ' ':
             ans += ' '
+        elif ciphertex[i] == '-':
+            ans += '-'
+        elif ciphertex[i] == ',':
+            ans += ','
     return ans
